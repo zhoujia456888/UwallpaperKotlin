@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "cc.lmiot.uwallpaper"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+buildscript {
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url 'https://dl.bintray.com/hpdx/maven/' }
+            maven { url 'https://jitpack.io' }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+
+    //下拉刷新上拉加载  https://github.com/scwang90/SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+
+    //design
+    implementation 'com.android.support:design:27.0.1'
+
+    //cardview  https://github.com/dandar3/android-support-v7-cardview
+    implementation 'com.android.support:cardview-v7:27.0.1'
+
+    //AndroidUtilCode https://github.com/hoangkien0705/Android-UtilCode
+    implementation 'com.blankj:utilcode:1.12.6'
+
+    //gson https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    //unsplash https://github.com/KeenenCharles/AndroidUnplash
+    implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
+
+    //标题Tab https://github.com/ogaclejapan/SmartTabLayout
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+
+    //图片加载 https://github.com/hpdx/fresco-helper
+    implementation 'com.facebook.fresco.helper:fresco-helper:2.0.4'
+
+    //material-dialogs   https://github.com/afollestad/material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    //BaseRecyclerViewAdapterHelper   https://github.com/CymChad/BaseRecyclerViewAdapterHelper    https://github.com/AllenCoder/BRVAH_kotlin
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.21"
+
+
+}
