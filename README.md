@@ -2,7 +2,7 @@
 根据[unsplash](https://unsplash.com)提供的[接口](https://unsplash.com/developers)做的一个壁纸下载客户端
 
 ## 功能
-* 这个是Kotlin的版本，是自己练手Kotlin用的。java版在[这里](https://github.com/zhoujia456888/Uwallpaper2)。
+* 这个是Kotlin的版本，是自己练手Kotlin用的。java版在[这里](https://github.com/zhoujia456888/Uwallpaper2)。
 * 获取每日最新图片，提供图片下载和设置壁纸功能。  
 * 支持随机图片的获取，让你每次刷新都有不同的感觉。
 * 最多获取200张？其实应该不止，退出再进就可以再次获取。
